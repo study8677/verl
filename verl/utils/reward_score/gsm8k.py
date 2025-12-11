@@ -43,8 +43,9 @@ def extract_solution(solution_str, method="strict"):
         else:
             invalid_str = ["", "."]
             # find the last number that is not '.'
-            for final_answer in reversed(answer):
-                if final_answer not in invalid_str:
+            for ans in reversed(answer):
+                if ans not in invalid_str:
+                    final_answer = ans
                     break
     return final_answer
 
